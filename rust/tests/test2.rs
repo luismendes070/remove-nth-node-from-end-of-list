@@ -1,9 +1,11 @@
 // In your test file, e.g., tests/test2.rs
 
 // Import the ListNode type from Solution.rs
-mod Solution;
+mod solution;
 #[cfg(test)]
 mod tests {
+    use crate::solution::ListNode;
+
     use super::*;
 
     #[test]
