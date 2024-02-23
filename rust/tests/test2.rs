@@ -1,3 +1,7 @@
+// In your test file, e.g., tests/test2.rs
+
+// Import the ListNode type from Solution.rs
+mod Solution;
 #[cfg(test)]
 mod tests {
     use super::*;
