@@ -1,4 +1,4 @@
-mod Solution;
+
 
 // https://leetcode.com/problems/remove-nth-node-from-end-of-list/solutions/1658772/rust-0ms-faster-than-100-recursive-solution-with-backtracking-no-cloning
 // Definition for singly-linked list.
@@ -17,13 +17,13 @@ mod Solution;
 //     }
 //   }
 // }
-impl Solution {
+impl<ListNode> Solution {
     pub fn remove_nth_from_end(head: Option<Box<ListNode>>, n: i32) -> Option<Box<ListNode>> {
         remove_nth_from_end_recr(head, n).0
     }
 }
     
-fn remove_nth_from_end_recr(head: Option<Box<ListNode>>, n: i32) -> (Option<Box<ListNode>>, usize) {
+fn remove_nth_from_end_recr<ListNode>(head: Option<Box<ListNode>>, n: i32) -> (Option<Box<ListNode>>, usize) {
     match head {
         None => (None, 1),
         Some(mut node) => {

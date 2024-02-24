@@ -1,3 +1,4 @@
+use crate::solution::Solution;
 #[cfg(test)]
 mod tests {
     use super::*;
